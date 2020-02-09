@@ -59,6 +59,7 @@ document.addEventListener('keydown', e => {
 
 const mover = () => {
   if (funList.length > 0) {
+    //The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
     let current = myBlock.getBoundingClientRect();
     let element = funList.shift();
     let item = element.textContent.replace('+', '').trim();
