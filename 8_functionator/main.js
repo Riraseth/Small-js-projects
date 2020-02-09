@@ -112,8 +112,7 @@ const addFun = val => {
   })
   span.addEventListener('click', e => {
     let curIndex = funList.indexOf(e.target);
-    console.log(curIndex);
-    let tempRemove = funList.splice(curIndex, 1);
+    funList.splice(curIndex, 1);
     myFunctionList.removeChild(e.target);
   }
   )
