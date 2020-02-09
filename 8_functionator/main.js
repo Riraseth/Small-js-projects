@@ -109,6 +109,13 @@ const addFun = val => {
     e.target.style.backgroundColor = 'white';
     e.target.color = 'black';
   })
+  span.addEventListener('click', e => {
+    let curIndex = funList.indexOf(e.target);
+    console.log(curIndex);
+    let tempRemove = funList.splice(curIndex, 1);
+    myFunctionList.removeChild(e.target);
+  }
+  )
 }
 
 //toString(16) - changes value to  hex
