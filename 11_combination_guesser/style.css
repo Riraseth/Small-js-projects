@@ -1,0 +1,14 @@
+.numb{
+  font-size: 2rem;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}
+
+label input{
+  width: 100%;
+  max-width: 10rem;
+}
