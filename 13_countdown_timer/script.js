@@ -2,11 +2,15 @@ const endDate = document.querySelector('input');
 const clock = document.querySelector('clock');
 let timeInterval;
 let timeStop = false;
+const savedValue = localStorage.getItem('countdown') || false;
+
+
 
 endDate.addEventListener('change', e => {
   e.preventDefault();
   clearInterval(timeInterval);
   const temp = new Date(endDate.value);
+  localStorage.setItem('countdown', temp);
   startClock(temp);
   timeStop = false;
 });
@@ -52,4 +56,10 @@ const displayTimeLeft = date => {
       el.textContent = entry[1];
     }
   })
+}
+
+if (savedValue){
+  startClock(savedValue);
+  let inputValue = new Date(savedValue)
+  endDate.valueAsDate = inputValue;
 }
